@@ -8,7 +8,7 @@ class dict
 
     static void Main(string[] args)
     {
-        Console.Write("name: ");
+        Console.Write("filename: ");
         string Username = (Console.ReadLine());
         string fileName = Username + ".txt";
       
@@ -18,6 +18,9 @@ class dict
             //string path = System.IO.Path.Combine(@"C:\Users\nisha.hiremani\source\repos\day12\dictionary", fileName);
             StreamWriter sw = new StreamWriter("C:\\Users\\nisha.hiremani\\source\\repos\\day12\\dictionary\\"+fileName+".txt");
             //Write a line of text
+
+            Console.Write("name: ");
+            sw.WriteLine(Console.ReadLine());
 
             Console.Write("age: ");
             sw.WriteLine(Console.ReadLine());
