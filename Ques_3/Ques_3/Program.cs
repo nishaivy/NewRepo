@@ -25,7 +25,7 @@ namespace ListCollectionDemo
             listEmployees.Add(emp5);
 
 
-            Console.WriteLine("\nRetrieving All Employees using For Loop");
+            Console.WriteLine("\nGeneric method to display the values");
             for (int i = 0; i < listEmployees.Count; i++)
             {
                 Employee employee = listEmployees[i];
