@@ -75,3 +75,15 @@ Create a directory and have atleast 5 such files in ""People Info"" directory."
 7.In a C# program, open a file from a directory and display the contents on screen. For this program, write atleast 3 specific exceptions and display the appropriate error msg on screen. 
 
 8.In a C# program, open a file from a directory and display the contents on screen. Check whether the file exists, if not throw an error msg. Similarly, check whether the directory exists otherwise throw the error msg on screen.
+# 28/9/22
+1.Write a statement lambda to calculate sum of 1 to n number.
+
+2.Write an expression lambda to find greater between two numbers.
+
+3.Write an lambda expression to swap given two numbers.
+
+4.Write an anonymous function to check given number is prime or not.
+
+5.Write an lambda expression to print all prime numbers up to n.
+
+6.Write an lambda expression to sort given array.
