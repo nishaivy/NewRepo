@@ -1,0 +1,72 @@
+using System;
+class Four
+    {
+       string res_number;
+        public void start()
+        {
+            Console.WriteLine("four wheeler started\n");
+        }
+        public void brake()
+        {
+            Console.WriteLine("Brake applied\n");
+        }
+        public void change_gear(int x)
+        {
+           Console.WriteLine("four wheeler is in "+x+"rd gear\n");
+        }
+
+    }
+
+class Taxi:Four
+  {
+      string color;
+      double rate,distance;
+      public new void start(){
+         Console.WriteLine("taxi started") ;
+      }
+      public Taxi( int a = 0, int b = 0) {
+         rate = a;
+         distance = b;
+      }
+      public double calculate_fare(){
+          return (rate*distance);
+      }
+  }
+  class Car:Four{
+      string model,owner;
+       public new void m(){
+         Console.WriteLine("model : 24rd") ;
+      }
+       public new void o(){
+         Console.WriteLine("owner: nisha") ;
+      }
+  }
+  class Program {
+      static void Main(string[] args) {
+         Car c=new Car();
+         c.start();
+         c.brake();
+         c.change_gear(3);
+         c.m();
+         c.o();
+         Taxi r = new Taxi(10, 7);
+         r.start();
+         double a = r.calculate_fare();
+         Console.WriteLine("Fare: {0}",a);
+         
+         Console.ReadKey();
+      }
+   }
+
+
+output:
+four wheeler started
+
+Brake applied
+
+four wheeler is in 3rd gear
+
+model : 24rd
+owner: nisha
+taxi started
+Fare: 70

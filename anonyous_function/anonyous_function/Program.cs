@@ -16,6 +16,7 @@ namespace Lambadas_Expression
             SimpleIn s = delegate (double p, double r, double t)
              {
                  double si;
+                 
                  //calculate simple interest
                  si = p * r * t / 100;
                  Console.Write("Simple interest= " + si + "\n");

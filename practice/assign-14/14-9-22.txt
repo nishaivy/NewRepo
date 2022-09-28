@@ -1,0 +1,209 @@
+//Write a C# Sharp program that takes userid and password as input (type string). After 3 wrong attempts, user will be rejected.
+
+using System;
+public class Password
+{
+public static void Main()
+{
+string username, password;
+int attempt = 0,crrt=0;
+       Console.Write("Check username and password :\n");
+do
+{
+Console.Write("Input a username: ");
+username = Console.ReadLine();
+ 
+Console.Write("Input a password: ");
+password = Console.ReadLine();
+if( username == "nisha" && password == "12345" )
+{
+    crrt=1;
+    attempt=3;
+}
+
+else
+{
+    crrt=0;
+    attempt++;
+}
+}
+while (( username != "nisha" || password != "12345" )
+        && (attempt != 3));
+        if (crrt == 0)
+        {
+            Console.Write("\nLogin attemp more than three times. Try later!\n");
+        }
+        else  
+        if(crrt==1)
+        {
+            Console.Write("\nPassword entered correctly!\n");	}         
+    }
+}
+
+//output
+// Check username and password :
+// Input a username: dsgh
+// Input a password: fghw
+// Input a username: rtyu
+// Input a password: fgh
+// Input a username: nisha
+// Input a password: 12345
+// Password entered correctly!
+
+//using System;
+public class Reverse
+{
+  public static void Main()
+  {  
+    char l1,l2,l3;
+  
+    Console.Write("letter 1: ");
+    l1 = Convert.ToChar(Console.ReadLine());
+ 
+    Console.Write("letter 2: ");
+    l2 = Convert.ToChar(Console.ReadLine());       
+ 
+    Console.Write("letter 3: ");
+    l3 = Convert.ToChar(Console.ReadLine());
+     
+    Console.WriteLine("{0} {1} {2}",l3,l2,l1);
+   }
+}
+//
+//output
+// letter 1: w
+// letter 2: r
+// letter 3: h
+// h r w
+
+//2. Write a C# Sharp program that takes a number and a width also a number, as input and then displays a triangle of that width, using that number. Go to the editor
+// Test Data
+// Enter a number: 6
+// Enter the desired width: 6
+// Expected Output :
+
+// 666666                                                      
+// 66666                                                           
+// 6666                                                                  
+// 666                                                        
+// 66                                                                  
+// 6 
+using System;
+public class Triangle
+{
+  public static void Main()
+  {
+   Console.Write("Enter number: ");
+   int num = Convert.ToInt32( Console.ReadLine() );
+ 
+   Console.Write("width: ");
+   int width = Convert.ToInt32( Console.ReadLine() );
+ 
+   int height = width;   
+   for (int row=0; row < height; row++)
+   {
+    for (int column=0; column < width; column++)
+   {
+   Console.Write( num );
+  }
+ 
+   Console.WriteLine();
+   width--;
+  }
+ }
+} 
+
+//output
+// Enter number: 4
+// width: 4
+// 4444
+// 444
+// 44
+// 4
+
+//inheritance
+using System;
+namespace Inheritance {
+class Person {
+   
+  
+    public string name;
+    public int age;
+    public int EmployeeID;
+    public int salary;
+   
+    public void EmployeeDetail(string name, int age,int salary,int EmployeeID)
+    {
+        this.name = name;
+        this.age = age;
+        this.salary=salary;
+        this.EmployeeID=EmployeeID;
+        Console.WriteLine("Name: " + name); 
+        Console.WriteLine("My age is " +age);
+        Console.WriteLine("EmployeeID: "+EmployeeID);
+        Console.WriteLine("salary: "+salary);
+    }
+}
+  
+
+class Employee : Person {
+    public Employee()
+    {
+      
+        Console.WriteLine("Employee Details: ");
+    }
+}
+   
+
+class Details {
+  
+    
+    static void Main(string[] args)
+    {
+        Employee e = new Employee();
+        e.EmployeeDetail("Nisha",22,12000,34);
+    }
+}
+}
+//output:Employee Details: 
+// Name: Nisha
+// My age is 22
+// EmployeeID: 34
+// salary: 12000
+
+//Write a C# Sharp program to display certain values of the function z = a2 + 5a - 2 (using integer numbers for y , ranging from -5 to +5).
+using System;
+public class Equation
+{
+    public static void Main()
+    {
+        int z, a;
+         
+        Console.WriteLine("z = a2 + 5a - 2 ");
+        Console.WriteLine();
+         
+        for (a=-5; a <= 5; a++)
+        {
+            int x=a*a;
+            z = x+5*a-2;
+            Console.WriteLine(
+                "a = {0} ; z=({0}*{0})+5*({0}) -2 = {1}",
+                a, z);
+        }
+    }
+}
+
+
+//output
+// z = a2 + 5a - 2 
+// a = -5 ; z=(-5*-5)+5*(-5) -2 = -2
+// a = -4 ; z=(-4*-4)+5*(-4) -2 = -6
+// a = -3 ; z=(-3*-3)+5*(-3) -2 = -8
+// a = -2 ; z=(-2*-2)+5*(-2) -2 = -8
+// a = -1 ; z=(-1*-1)+5*(-1) -2 = -6
+// a = 0 ; z=(0*0)+5*(0) -2 = -2
+// a = 1 ; z=(1*1)+5*(1) -2 = 4
+// a = 2 ; z=(2*2)+5*(2) -2 = 12
+// a = 3 ; z=(3*3)+5*(3) -2 = 22
+// a = 4 ; z=(4*4)+5*(4) -2 = 34
+// a = 5 ; z=(5*5)+5*(5) -2 = 48

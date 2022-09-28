@@ -1,0 +1,88 @@
+# Hide the Bank Account number
+# Write a function in Python that accepts Your Bank Account number. It should return a string where all the characters are hidden with an asterisk except the last four. For example, if the function gets sent "878375834754", then it should return "4754".
+# Input: 123456789
+# Output:*****6789
+
+def cardNumberHider():
+    str = input("Enter Account number: ")
+    masked = len(str) - 4
+    slimstr = str[masked:]
+    print("Your masked Account number is: ", end="")
+    print("*" * masked + slimstr)
+cardNumberHider()
+
+# Enter Account number: 123456789
+# Your masked Account number is: *****6789
+
+#abstract:
+using System;
+abstract class Solid
+    {
+        public void vol()
+        {
+            Console.WriteLine("Volume\n");
+        }
+        public void sa()
+        {
+            Console.WriteLine("Surface Area\n");
+        }
+    }
+
+class Cylinder:Solid
+  {
+      int Radius,Height;
+      double PI=3.14;
+      public Cylinder( int a = 0, int b = 0) {
+         Radius = a;
+         Height = b;
+      }
+      public double calculate_vol(){
+          return (PI*(Radius * Radius) * Height);
+      }
+       public double calculate_surfarea(){
+          return 2*PI*Radius * (Height + Radius);
+      }
+  }
+  class Cube:Solid{
+      int Side;
+      public Cube( int a=0) {
+         Side=a;
+      }
+      public double calculate_vcube(){
+          return (Math.Pow(Side, 3));
+      }
+       public double calculate_scube(){
+          return 6 * (Side * Side);
+      }
+      
+  }
+  class Program {
+      static void Main(string[] args) {
+         Cube c=new Cube(2);
+         Cylinder r = new Cylinder(10, 7);
+         c.vol();
+        double d = c.calculate_vcube();
+         Console.WriteLine("Volume of Cube: {0}\n",d);
+         double a = r.calculate_vol();
+         Console.WriteLine("Volume of Cylinder: {0}\n",a);
+         double e = c.calculate_scube();
+         c.sa();
+         Console.WriteLine("Surface Area of Cube: {0}\n",e);
+         double b = r.calculate_surfarea();
+         Console.WriteLine("Surface Area of Cylinder: {0}\n",b);
+         Console.ReadKey();
+      }
+   }
+
+# output:
+# Volume
+
+# Volume of Cube: 8
+
+# Volume of Cylinder: 2198
+
+# Surface Area
+
+# Surface Area of Cube: 24
+
+# Surface Area of Cylinder: 1067.6

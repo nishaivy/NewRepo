@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        public struct EmployeeRecord
+        {
+            public string EmployeeName, DateOfJoining;
+            public int Salary;
+            public EmployeeRecord(string name, string date, int sal)
+            {
+                EmployeeName = name;
+                DateOfJoining = date;
+                Salary = sal;
+            }
+
+            public void ShowEmployeeDetails()
+            {
+                MessageBox.Show("Employee Name : " + EmployeeName);
+                MessageBox.Show("Date of Joining: " + DateOfJoining);
+             
+                MessageBox.Show("Salary : " + Salary);
+            }
+        }
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EmployeeRecord emp1 = new EmployeeRecord("mukesh","25",50000);
+
+            emp1.ShowEmployeeDetails();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EmployeeRecord emp2 = new EmployeeRecord("mukesh", "25", 50000);
+
+            emp2.ShowEmployeeDetails();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EmployeeRecord emp3 = new EmployeeRecord("mukesh", "25", 50000);
+
+            emp3.ShowEmployeeDetails();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EmployeeRecord emp4 = new EmployeeRecord("mukesh", "25", 50000);
+
+            emp4.ShowEmployeeDetails();
+        }
+    }
+}
