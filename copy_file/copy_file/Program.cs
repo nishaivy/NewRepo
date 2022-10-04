@@ -16,8 +16,8 @@ class Copy_File
         // Display file2 contents
         Console.WriteLine(File.ReadAllText("28.txt"));
 
-        string Oldfilepath = @"C:\Users\nisha.hiremani\source\repos\day12\copy_file\copy_file\bin\Debug\nisha.txt";
-        string NewFilePath = @"C:\Users\nisha.hiremani\source\repos\day12\copy_file\copy_file\28.txt";
+        string Oldfilepath = @"C:\Users\nisha.hiremani\source\repos\evalutionC#\Ques_6\Ques_6\bin\Debug\nisha.txt";
+        string NewFilePath = @"C:\Users\nisha.hiremani\source\repos\evalutionC#\Ques_6\28.txt";
         StreamReader reader = new StreamReader(Oldfilepath);
         string fileContent = reader.ReadToEnd();
 
